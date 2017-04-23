@@ -27,7 +27,7 @@
 * combineReducers(reducers) // 随着应用变得复杂，需要对 reducer 函数 进行拆分，拆分后的每一块独立负责管理 state 的一部分。此方法接收一个reducer对象,并返回一个合并后的reudcer。
 
 ### Redux 的工作流程
-用户发出 action > store 调用 reducer > reducer 返回一个新的state > 如果有监听函数，Store 就会调用监听函数 > React重新渲染页面 
+用户发出 action > store 调用 reducer对action进行处理 > reducer 返回一个新的state > 如果有监听函数，Store 就会调用监听函数 > React重新渲染页面 
 
 
 
