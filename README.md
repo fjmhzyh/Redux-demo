@@ -18,6 +18,17 @@
 2014年 Facebook 提出了 Flux 架构的概念，引发了很多的实现。2015年，Redux 出现，将 Flux 与函数式编程结合一起，很短时间内就成为了最热门的前端架构。
 
 ### redux 基本概念
+* Provider  // Provider作为顶层app的分发点，它只需要store属性就可以了。它会将state分发给所有被connect的组件。
+* connect   // connect是一个科里化函数,用来连接React组件和Redux。传入对应的state和action等数据以及一个React组件，并返回一个新组件
+* store     // store是一个js对象,负责存储应用的所有状态 
+* state     // state表示应用当前的状态。可以通过store.getState()获得
+* action    // action 是 用户通过 view层 发出的通知，表示 State 应该要发生变化了。
+* Reducer   // reducer Reducer 是一个函数，它接受 Action 和当前 State 作为参数，返回一个新的 State
+* combineReducers(reducers) // 随着应用变得复杂，需要对 reducer 函数 进行拆分，拆分后的每一块独立负责管理 state 的一部分。此方法接收一个reducer对象,并返回一个合并后的reudcer。
+
+### Redux 的工作流程
+用户发出 action > store 调用 reducer > reducer 返回一个新的state > 如果有监听函数，Store 就会调用监听函数 > React重新渲染页面 
+
 
 
 ### `npm start`
